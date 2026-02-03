@@ -1,0 +1,1033 @@
+/* =========================
+   VARIABLES CSS GLOBALES
+   Dégradé principal et ombre réutilisable
+========================= */
+:root {
+    --degradeSite: linear-gradient(114deg, #6A71D8 0%, #6E65C6 20%, #6E65C6 46%);
+    --weLiveInTheShadows : 0 2px 4px rgba(0, 0, 0, 0.2);        /* x dessous côtés couleur*/
+}
+
+/* =========================
+   RESET GLOBAL
+========================= */
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+    background-color: #F5F5F5;
+}
+
+/* =========================
+   HEADER HTML
+========================= */
+header{
+    background-color: #FFFFFF;
+    height: 100px;
+    display: flex;
+    box-shadow: var(--weLiveInTheShadows);
+}
+
+/* =========================
+   HEADER INTERNE (#header)
+========================= */
+#header{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo{
+    width: 150px;
+}
+
+/* =========================
+   MAIN
+========================= */
+main{
+    width: 85%;
+    margin: auto;
+}
+
+/* =========================
+   VILLE (MÉTÉO)
+========================= */
+#ville{
+    display: none;
+    font-weight: 700;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+
+/* =========================
+   BLOC MÉTÉO
+========================= */
+#meteo{
+    background: var(--degradeSite);;
+    display: flex;
+    border-radius: 16px;
+    height: 80px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 25px;
+}
+
+/* =========================
+   ICÔNE SOLEIL
+========================= */
+#soleil{
+    width: 70px;
+    height: 70px;
+}
+
+/* =========================
+   TEMPÉRATURE
+========================= */
+#degre{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* =========================
+   TITRES
+========================= */
+h2{
+    margin-top: 30px;
+}
+
+.sousTitre{
+    color: gray;
+}
+
+h3{
+    margin-top: 20px;
+}
+
+/* =========================
+   CARROUSEL OCCASION
+========================= */
+#CarOccasion{
+    border-radius: 16px;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+/* =========================
+   CARTE GÉNÉRIQUE
+========================= */
+.Card{
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 120px;
+    height: 100px;
+    text-align: center;
+    box-shadow: var(--weLiveInTheShadows);
+    margin: 5px;
+}
+
+/* =========================
+   PICTO
+========================= */
+.picto{
+    width: 45px;
+    height: 45px;
+}
+
+/* =========================
+   VÊTEMENTS (LISTE)
+========================= */
+.vetement{
+    margin-top: 15px;
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    border-radius: 16px;
+    scroll-snap-type: x mandatory;
+    object-fit: contain;
+}
+
+/* =========================
+   CARTE VÊTEMENT
+========================= */
+.card-vetement{
+    min-width: 35%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--weLiveInTheShadows);
+    text-align: center;
+    margin: 5px;
+    gap: 20px;
+}
+
+/* =========================
+   HOVER IMAGE VÊTEMENT
+========================= */
+.card-vetement:hover > .img-vet{
+    transform: scale(1.05);
+}
+
+/* =========================
+   IMAGE VÊTEMENT
+========================= */
+.img-vet{
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+/* =========================
+   TEXTE CARTE VÊTEMENT
+========================= */
+.card-vetement p{
+    color: gray;
+}
+
+.card-vetement h4{
+    text-transform: capitalize;
+}
+
+/* =========================
+   APERÇU
+========================= */
+#apercu{
+    margin-top: 15px;
+    width: 84%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--weLiveInTheShadows);
+}
+
+/* =========================
+   PHOTO APERÇU
+========================= */
+#photo-apercu {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+#photo-apercu img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================
+   TEMPÉRATURE INFO
+========================= */
+.soleil-logo{
+    width: 20px;
+}
+
+#info-temperature{
+    width: 175px;
+    display: flex;
+    background: var(--degradeSite);
+    padding: 7px;
+    border-radius: 30px;
+    margin-top: 20px;
+    gap: 10px;
+    color: #FFFFFF;
+    justify-content: center;
+}
+
+/* =========================
+   DÉTAIL TENUE
+========================= */
+#detail-tenu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* =========================
+   CARTE DÉTAIL
+========================= */
+.cart-detail{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: var(--weLiveInTheShadows);
+}
+
+.cart-detail h4{
+    text-transform: capitalize;
+}
+
+.cart-detail p{
+    color: gray;
+}
+
+.detail-vet{
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+}
+
+/* =========================
+   FAVORI
+========================= */
+
+/* Bouton normal */
+#favorie {
+    margin-top: 20px;
+    background: var(--degradeSite);
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+/* Texte */
+.favorie-text {
+    transition: all 0.3s ease;
+}
+
+/* Icône cœur */
+.favorie-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* cœur blanc par défaut */
+    transition: all 0.3s ease;
+}
+
+/* ===== ÉTAT ACTIF ===== */
+#favorie.active {
+    background: #FFFFFF;
+    color: #282866;
+}
+
+/* Texte actif */
+#favorie.active .favorie-text {
+    font-weight: bold;
+}
+
+/* Cœur rempli + couleur du bouton */
+#favorie.active .favorie-icon {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(10%) saturate(3915%) hue-rotate(201deg) brightness(93%) contrast(102%);
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   AJOUT PHOTO
+========================= */
+#ajouter-une-photo{
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    margin-top: 15px;
+    box-shadow: var(--weLiveInTheShadows);
+}
+
+#ajouter-une-photo h4 {
+    padding-bottom: 10px;
+}
+
+#prendre-photo{
+    width: 100px;
+    height: 100px;
+    background: var(--degradeSite);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera{
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+}
+
+#folder{
+    display: none;
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+#nom-vetement{
+    margin-top: 15px;
+    padding-left: 3%;
+    width: 97%;
+    height: 40px;
+    border-radius: 16px;
+    box-shadow: var(--weLiveInTheShadows);
+    border: none;
+}
+
+input:focus{
+    outline-color: #6A71D8;
+}
+
+/* =========================
+   CATÉGORIES
+========================= */
+#categories{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* =========================
+   CARTE CATÉGORIE
+========================= */
+.cardCategorie{
+    background-color: white;
+    min-width: 23.9%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 16px;
+    box-shadow: var(--weLiveInTheShadows);
+}
+
+.picto-categorie{
+    width: 50px;
+    height: 50px;
+}
+
+/* =========================
+   ÉTATS ACTIFS
+========================= */
+.Card.active img, 
+.Card.active p,
+.cardCategorie.active img, 
+.cardCategorie.active h4,
+.bouton-occas.active p {
+    filter: invert(1);
+}
+
+.Card.active,
+.cardCategorie.active,
+.bouton-occas.active {
+    background: var(--degradeSite);
+}
+
+.Card,
+.cardCategorie,
+.bouton-occas {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* =========================
+   OCCASIONS
+========================= */
+#occas{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bouton-occas{
+    min-width: 42%;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: var(--weLiveInTheShadows);
+}
+
+#valide{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.bouton-enregistre{
+    background: var(--degradeSite);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #FFFFFF;
+    height: 60px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* =========================
+   AFTER VALIDATION
+========================= */
+.afterValide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.afterValide.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+#footer{
+    background-color: #282866;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#reseaux-social{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-reseaux{
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+#mentions{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    font-size: 10px;
+}
+
+#liens{
+    display: flex;
+    gap: 5px;
+}
+
+#prenom{
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+    text-align: center;
+}
+
+#liens a{
+    color: white;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (min-width: 768px) {
+    .card-vetement{
+        min-width: 33%;
+    }
+
+    .cardCategorie{
+        min-width: 28.7%;
+    }
+
+    .bouton-occas{
+        min-width: 29%;
+    }
+
+    #ville{
+        display: block;
+        font-size: 40px;
+    }
+
+    #prenoms{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    #apercu{
+        width: 93%;
+    }
+}
+
+@media (min-width: 1250px){
+    #cam{
+        display: none;
+    }
+
+    #folder{
+        display: block;
+    }
+
+    main{
+        width: 70%;
+        margin: auto;
+    }
+
+    .cardCategorie{
+        min-width: 30.3%;
+    }
+
+    #ville{
+        display: block;
+        font-size: 60px;
+    }
+
+    .bouton-occas{
+        min-width: 30.6%;
+    }
+
+    #apercu{
+        width: 95%;
+    }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+    display: none;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--degradeSite);
+    border-radius: 10px;
+}
+
+/* =========================
+   NAVIGATION (BIS)
+   ⚠️ Deuxième déclaration volontaire
+========================= */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* =========================
+   NAV STRUCTURE
+========================= */
+#nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* =========================
+   BURGER
+========================= */
+#nav .border {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+#nav .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#nav .bar1,
+#nav .bar2,
+#nav .bar3 {
+    width: 26px;
+    height: 3px;
+    background: var(--degradeSite);
+    margin: 2px 0;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+#nav .bar2 {
+    width: 22px;
+}
+
+/* =========================
+   ANIMATION CROIX
+========================= */
+.change .bar1 {
+    transform: translateY(4px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+/* =========================
+   MENU LIENS
+========================= */
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #262D74;
+}
+
+.nav-links li a:hover {
+    color: #6E65C6;
+}
+
+/* =========================
+   USER
+========================= */
+.nav-user {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.compte {                                                                                                                                           /* https://clampcss.com/css-filter.html */
+    width: 25px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(7%) saturate(7241%) hue-rotate(210deg) brightness(90%) contrast(101%);
+}
+
+.compte:hover {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(542%) hue-rotate(210deg) brightness(96%) contrast(74%);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+    #header {
+        flex-wrap: wrap;
+    }
+
+    #nav .border {
+        display: flex;
+    }
+
+    #nav {
+        flex: 0;
+        order: 1;
+    }
+
+    .logo-container {
+        order: 2;
+    }
+
+    .nav-user {
+        order: 3;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: var(--weLiveInTheShadows);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+
+    #nav.open .nav-links {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+
+/* =========================
+   TABLETTE & DESKTOP
+========================= */
+@media (min-width: 768px) {
+    .logo-container {
+        order: 1;
+    }
+
+    #nav {
+        order: 2;
+        justify-content: center;
+    }
+
+    .nav-user {
+        order: 3;
+    }
+
+    #nav .border {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+    }
+}
+
+/* =========================
+   DRAG SCROLL
+========================= */
+.vetement,
+#CarOccasion {
+    cursor: grab;
+    user-select: none;
+}
+
+.vetement:active,
+#CarOccasion:active {
+    cursor: grabbing;
+}
+
+/* ==================================================
+   POPUP DE SUCCÈS
+   ================================================== */
+.success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.success-popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.popup-content img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(95%) saturate(401%) hue-rotate(198deg) brightness(91%) contrast(86%);
+}
+
+.popup-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #6A71D8;
+}
+
+.popup-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* ==================================================
+   PAGE DE CHARGEMENT
+   ================================================== */
+
+/* Page */
+body.loading {
+    height: 100vh;
+    background-color: #282866;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Loader container */
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Logo */
+.loader-logo {
+    max-width: 200px;
+    min-width: 100px;
+    animation: 
+        breathe 2.5s ease-in-out infinite;
+}
+
+/* Apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Respiration du logo */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Disparition */
+.fade-out {
+    animation: fadeOut 0.8s ease-in forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+/* ==================================================
+   CHARGEMENT REPONSE IA
+   ================================================== */
+
+.ai-loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.loader-content {
+    text-align: center;
+    max-width: 400px;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #6A71D8;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+.ai-loader h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ai-loader p {
+    font-size: 1rem;
+    color: #666;
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

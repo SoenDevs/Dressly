@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/DresslyBlanc.png" type="image/x-icon">
+    <title>Dressly</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div class="logo-container">
+                <img class="logo" src="assets/img/DresslyBlue.png" alt="logo du site">
+            </div>
+            <nav id="nav">
+                <div class="border">
+                    <div class="menu" onclick="openCloseMenu(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#garde-robe">Garde-Robe</a></li>
+                    <li><a href="#ajoute-vet">Ajouter des vêtements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <ul class="nav-user">
+                <a href="#">
+                    <img class="compte" src="assets/img/user.png" alt="Icône utilisateur">
+                </a>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="maGardeRobe">
+            <article>
+                <div id="meteo">
+                    <div id="température">
+                        <p id="degre"></p>          <!-- Relier au JS -->
+                        <p id="meteo-desc"></p>     <!-- Relier au JS -->
+                    </div>
+                    <p id="ville">Compiègne</p>
+                    <img id="soleil" src="assets/img/sunLogo.png" alt="logo du soleil">
+                </div>
+            <h2 id="garde-robe" >Ma Garde-robe</h2>
+            <p class="sousTitre">Créez votre tenue parfaite</p>
+            </article>
+            
+            <article id="disponible">
+                <h3>Vêtements disponibles</h3>
+                <div class="vetement vetements"></div>     <!-- Relier au JS -->
+                <h3>Accessoires disponibles</h3>
+                <div class="vetement accessoires"></div>     <!-- Relier au JS -->
+                <h3>Chaussures disponibles</h3>
+                <div class="vetement chaussures"></div>     <!-- Relier au JS -->
+            </article>
+            <article id="Occasion">
+                <h3>Occasion</h3>
+                <div id="CarOccasion">
+                    <div class="Card" data-occasion="pro,professionnel,bureau,travail,élégant,télétravail">
+                        <img class="picto" src="assets/img/occasionBusiness.png">
+                        <p>Pro</p>
+                    </div>
+                    <div class="Card" data-occasion="décontracté,confort,urbain,street,casual,mi-saison,moderne,clean,minimal">
+                        <img class="picto" src="assets/img/occasionCasualWear.png">
+                        <p>Décontracté</p>
+                    </div>
+                    <div class="Card" data-occasion="cours,étudiant,campus,confort">
+                        <img class="picto" src="assets/img/occasionBooks.png">
+                        <p>Cours</p>
+                    </div>
+                    <div class="Card" data-occasion="soirée,chic,classe,élégant,créatif,artistique,original,coloré">
+                        <img class="picto" src="assets/img/occasionEvent.png">
+                        <p>Événements</p>
+                    </div>
+                    <div class="Card" data-occasion="urbain,street,vintage,rétro,coloré,créatif,original">
+                        <img class="picto" src="assets/img/occasionSocial.png">
+                        <p>Social</p>
+                    </div>
+                    <div class="Card" data-occasion="sport,running,performance,froid,hiver,couverture">
+                        <img class="picto" src="assets/img/occasionSport.png">
+                        <p>Sport</p>
+                    </div>
+                    <div class="Card" data-occasion="vacances,été,plage,pluie,pratique,extérieur,résistant,automne,travail">
+                        <img class="picto" src="assets/img/occasionTravel.png">
+                        <p>Voyages</p>
+                    </div>
+                    <div class="Card" data-occasion="détente,relax,confort,intérieur,vacances,été,plage">
+                        <img class="picto" src="assets/img/occasionRelaxation.png">
+                        <p>Détente</p>
+                    </div>
+                </div>
+                <div class="bouton-enregistre" id="valid-occasion">
+                    <img id="valide" src="assets/img/gemini.png" alt="validé" style="filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7488%) hue-rotate(151deg) brightness(112%) contrast(101%); ">
+                    <h4>Générer ma Tenue</h4>
+                </div>
+            </article>
+        </section>
+        <section id="apercuDeLaTenu" class="afterValide">
+            
+        </section>
+        <section>
+            <h2 id="ajoute-vet">Ajouter un vêtement</h2>
+            <article id="Photo-vetement">
+                <h3>Photo du Vêtement</h3>
+                <div id="ajouter-une-photo">
+                    <div id="prendre-photo">
+                        <img id="cam" class="camera" src="assets/img/camera.png" alt="img-photo">
+                        <img id="folder" class="camera" src="assets/img/folder.png" alt="fichier">
+                    </div>
+                    <h4>Ajouter une Photo</h4>
+                    <p>Prenez une photo ou choisissez depuis la galerie</p>
+                    <p></p>
+                </div>
+            </article>
+            <article id="nom-du-vetement">
+                <h3>Nom du Vêtement</h3>
+                <div id="input">
+                    <label for="nom-vetement"></label>
+                    <input type="text" id="nom-vetement" name="nom-vet" placeholder="Ex: Chemise Blanche"/>
+                </div>
+            </article>
+            <article id="categorie">
+                <h3>Catégorie</h3>
+                <div id="categories">
+                    <div class="cardCategorie" data-category="haut">
+                        <img class="picto-categorie" src="assets/img/occasionCasualWear.png" alt="">
+                        <h4>Vêtement</h4>
+                    </div>
+                    <div class="cardCategorie">
+                        <img class="picto-categorie" src="assets/img/basket.png" alt="">
+                        <h4>Chaussures</h4>
+                    </div>
+                    <div class="cardCategorie">
+                        <img class="picto-categorie" src="assets/img/montre.png" alt="">
+                        <h4>Accessoires</h4>
+                    </div>
+                </div>
+            </article>
+            <article id="Occasions">
+                <h3>Occasions</h3>
+                <div id="occas">
+                    <div class="bouton-occas">
+                        <p>Professionnel</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Décontracté</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Cours</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Événements</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Social</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Sport</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Voyages</p>
+                    </div>
+                    <div class="bouton-occas">
+                        <p>Détente</p>
+                    </div>
+                </div>
+            </article>
+            <div class="bouton-enregistre">
+                <img id="valide" src="assets/img/valid.png" alt="validé">
+                <h4>Enregistrer mon Vêtement</h4>
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <div id="footer">
+            <div id="reseaux-social">
+                <img class="img-reseaux" src="assets/img/tiktok.png" alt="">
+                <img class="img-reseaux" src="assets/img/facebook.png" alt="">
+                <img class="img-reseaux" src="assets/img/instagram.png" alt="">
+                <img class="img-reseaux" src="assets/img/x.png" alt="">
+            </div>
+            <div id="mentions">
+                <div id="liens">
+                    <a href="#">Mentions légales</a>
+                    <p> | </p>
+                    <a href="#">Contact</a>
+                    <p> | </p>
+                    <a href="#">Blog</a>
+                </div>
+                <p>&copy; 2025 Dressly</p>
+                <div id="prenom">
+                    <p>Nilâ OZANNE</p>
+                    <p>|</p>
+                    <p>Soen AUDRAN</p>
+                    <p>|</p>
+                    <p>Hugo DEGROOTE</p>
+                    <p>|</p>
+                    <p>Raphaël TURCHI</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
